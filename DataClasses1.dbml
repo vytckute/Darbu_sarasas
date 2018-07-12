@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Darbau_DB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Darbau_DB.mdf;Integrated Security=True" SettingsObjectName="Darbu_sarasas.Properties.Settings" SettingsPropertyName="Darbau_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Darbai" Member="Darbais">
+    <Type Name="Darbai">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Darbuotojo_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Darbas" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Darbo_pr" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Darbo_pab" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Darbuotojai" Member="Darbuotojais">
+    <Type Name="Darbuotojai">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vardas" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pavarde" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pareigos" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[El.pastas]" Member="El_pastas" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
